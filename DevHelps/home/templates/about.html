@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="with=device-width, initial-scale=1.0">
+       {% load static %}
+       <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+       <section class="sub-header">
+              <nav>
+                     <div class="nav-links">
+                            <ul>
+                                   <li><a href="base">HOME</a></li>
+                                   <li><a href="feeds">FEEDS</a></li>
+                                   <li><a href="">FILTERS</a>
+                                          <ul>
+                                          {% for v in var %}
+                                              <li><a href="category/{{v.url}}">{{v.title}}</a></li>
+                                          {% endfor %}
+                                          </ul>
+                                   </li>
+                                   <li><a href="about">ABOUT US</a></li>
+                                   <li><a href="contact">CONTACT US</a></li>
+                            </ul>
+                            
+                     </div>
+              </nav>
+              <h1>ABOUT US</h1>
+        </section>
+             
+<!-----about us contant------>
+       <section class="about-us">
+              <div class="row">
+                     <div class="about-col">
+                       <h1>What the NETWEB is</h1>
+                       <p>We are known for providing personalised content to all the members of organisations including teachers,staff and students. <br> evrn we are always avalible to post your notices as well and are always waiting for your valuable suggestions.
+                     </p>
+                       <a href="https://www.svimi.org/" class="hero-btn green-btn" >know more</a>     
+                     </div>
+                     <div class="about-col">
+                            <img src="/media/C2.jpg">
+                            
+                     </div>
+              </div>
+              
+       </section>
+
+                     
+              
+         
+      
+       
+       
+
+
+<!-----footer---->
+<section class="footer">
+       <h4>Get in touch</h4>
+       <p>Scheme No.71, Gumasta Nagar,
+              Indore- 452009 Madhya Pradesh, India
+              <br>
+              phone
+              Toll Free:18002332601
+              Phone: +91-731-2780011,2382962
+              <br>
+              Admission Enquiry: 9329912587, 9424881103, 9329912583
+              send
+              <br>
+              email id:
+              svimi@svimi.org
+              admission@svimi.org
+              <br>
+              
+       </div>
+       <i class="fa fa-facebook"></i>
+       <i class="fa fa-whatsapp"></i>
+       <i class="fa fa-instagram"></i>
+       <i class="fa fa-twitter"></i>
+</section>
+</body>
+</html>
+
+

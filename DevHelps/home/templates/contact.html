@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="with=device-width, initial-scale=1.0">
+	{% load static %}
+       <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+       <section class="sub-header1">
+              <nav>
+                     <div class="nav-links">
+                            <ul>
+                                   <li><a href="base">HOME</a></li>
+                                   <li><a href="feeds">FEEDS</a></li>
+                                   <li><a href="">FILTERS</a>
+                                          <ul>
+                                                 {% for v in var %}
+                                                     <li><a href="category/{{v.url}}">{{v.title}}</a></li>
+                                                 {% endfor %}
+                                                 </ul>
+                                   </li>
+                                   <li><a href="about">ABOUT US</a></li>
+                                   <li><a href="contact">CONTACT US</a>
+                                   <ul>
+                                          <li><a href="send">SENDNOTICES</a></li>
+                                   </ul>
+                            </li>
+
+                            </ul>
+                            
+                     </div>
+              </nav>
+              <h1>CONTACT US</h1>
+        </section>
+             
+<!-----contact us contant------>
+       <section class="contact-us">
+              <div class="row">
+                     <div class="contact-col">
+                       <h1>GET IN TOUCH</h1>
+                       <p>This is Shri Vaishnav Institute Of Management providing the Networking Site for all the members of SVIM to just be in connection with the institute and regarding information.</p>
+
+                     </div>
+                     <div class="about-col">
+                            <img src="/media/aachal.jpg">
+                            
+                     </div>
+              </div>
+              
+       </section>
+       <section class="contact_us">
+              <div class="row">
+              <div class="contact_col">
+              
+                     <div>
+                            <i class="fa fa-home"></i>
+                            <samp>
+                                   <h5>Scheme No.71, Gumasta Nagar,
+                                          
+                            </h5>
+                                   <p>Indore- 452009 Madhya Pradesh, India</p>
+                            </samp>
+                     </div>
+                     <div>
+                            <i class="fa fa-phone"></i>
+                            <samp>
+                                   <h5>Toll Free:18002332601</h5>
+                                   <p>Phone: +91-731-2780011,2382962</p>
+                            </samp>
+                     </div>
+                     
+                     <div>
+                            <i class="fa fa-envelope-o"></i>
+                            <samp>
+                                   <h5>svimi@svimi.org</h5>
+                                   <p>admission@svimi.org</p>
+                            </samp>
+                     </div>
+                     </div> 
+                     <div class="contact_col">
+                            <form method="POST" action="feedback">
+                                   {% csrf_token %}
+                                   <input type="text" name="name" placeholder="Enter your name" required>
+                                   <input type="email" name="email" placeholder="Enter email address" required>
+                                   <textarea rows="8" name="content" placeholder="Feedback" required></textarea>
+                                   <button type="submit" class="hero-btn green-btn">Send</button>
+                            </form>
+                     </div>
+                     
+              
+       </div>
+              
+       </section>
+
+                     
+              
+         
+      
+       
+       
+
+
+<!-----footer---->
+<section class="footer">
+       <h4>Get in touch</h4>
+       <p>Scheme No.71, Gumasta Nagar,
+              Indore- 452009 Madhya Pradesh, India
+              <br>
+              phone
+              Toll Free:18002332601
+              Phone: +91-731-2780011,2382962
+              <br>
+              Admission Enquiry: 9329912587, 9424881103, 9329912583
+              send
+              <br>
+              email id:
+              svimi@svimi.org
+              admission@svimi.org
+              <br>
+              
+       </div>
+       <i class="fa fa-facebook"></i>
+       <i class="fa fa-whatsapp"></i>
+       <i class="fa fa-instagram"></i>
+       <i class="fa fa-twitter"></i>
+</section>
+</body>
+</html>
+
+

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+       {% load static %}
+	<meta name="viewport" content="with=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{%static 'style.css' %}"/>
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+       <section class="header">
+              <nav>
+                     <div class="nav-links">
+                            <ul>
+                                   <li><a href="base">HOME</a></li>
+                                   <li><a href="about">ABOUT US</a></li>
+                                   <li><a href="feeds">FEEDS</a></li>
+                                  
+                                   
+                                   <li><a href="base">FILTERS</a>
+                                          <ul>
+                                                 {% for v in var %}
+                                                 {{v.title}}
+                                              <li><a href="category/{{v.url}}">{{v.title}}</a></li>
+                                                 {% endfor %} 
+                                                 
+
+                                          </ul>
+                                   </li>
+                                   <li><a href="contact">CONTACT US</a>
+                                    <ul>
+                                          <li><a href="send">SENDNOTICES</a></li>
+                                          </ul>
+                                   </li>
+                                   
+                                   <li><a href="logout">LOGOUT</a></li>
+                            </ul>
+                            
+                     </div>
+              </nav>
+               <div class="text-box">
+                     <h1>__DevHelp__</h1>
+                     <p>Centraslized system For All The Informations..</p>
+                     <a href = "{% url  'about' %}" class="hero-btn">VISIT US TO KNOW MORE</a>
+                     
+              </div> 
+         
+       </section>
+       
+       
+<!-----course---->
+       <section class="course"> 
+              <h1>ABOUT THE INSTITUTE</h1>
+              <p>Growth of students is our deuty</p>
+              
+              <div class="row">
+                     
+                     <div class="course-col">
+                            <h3>Achivements</h3>
+                            <p>The Institute proudly announces the UGC- NAAC Accreditation with ‘A’ Grade in two consecutive cycles in 2012 and 2017 respectively indicating its highest commitment of quality in all aspects. During past 33 years journey, it has been serving the society by providing excellent environment for education in area of Management and Computer Science.</p>
+                            
+                     </div>
+                      <div class="course-col">
+                            <h3>Infrastructure</h3>
+                            <p> The Library of the institute, with its modern collection of knowledge resources and innovative information services fills an essential role for students, faculty in their intellectual pursuits. It is very vivid and contains wide range of books and publications around 48166 books, 2728 CD's, more than 2000 online journals, 85 print journals 41 video cassettes, 18 encyclopedias etc., that caters to the needs of students, faculty members and research scholars. The Library also has a fairly good collection of Indian Philosophy, Value Management, Harvard Business publishing books, ICFAI Publishing books, IGNOU teaching materials, Project Reports, Case Studies, Biographies and Autobiographies.</p>
+                            
+                     </div>
+                      <div class="course-col">
+                            <h3>TRAINING AND PLACEMENT CELL</h3>
+                            <p>Shri Vaishnav Institute of Management, Indore has always given training, placements an utmost priority and to implement it into action an exclusive Training and Placement cell (T&P) has been established with state-of-art facilities. The cell is headed by experienced professionals from Industry.
+
+                                   Very extensive (& intensive as well) training programmes are organized under the umbrella of T&P cell. These Programmes cater to the present and projected needs of the Industry in future.</p>
+                            
+                     </div>
+              </div>
+        </section>  
+<!-----campus---->
+
+        <section class="campus">
+              <h1>POPULAR DEPARTMENTS..</h1>
+              <p>Go for your filter. </p>
+                
+                <div class="row">
+                     <div class="campus-col">
+                            <img src="/media/act.jpg">
+                            <div class="layer">
+                                   <h3><a href="/category/acdm">Activities</a></h3>
+                                   
+                            </div>
+                     </div>
+
+                             <div class="campus-col">
+                            <img src="/media/acad.jpg">
+                            <div class="layer">
+                                   <h3><a href="/category/acd">Acadmics</a></h3>
+                                   
+                            </div>
+                     </div>
+                     <div class="campus-col">
+                            <img src="/media/library.jpg">
+                            <div class="layer">
+                                   <h3><a href="/category/lib">library</a></h3>
+                                   
+                            </div>
+                            
+                     </div>
+                       
+                </div>
+                <div class="row">
+                     <div class="campus-col">
+                            <img src="/media/scolorship.jpg">
+                            <div class="layer">
+                                   <h3><a href="category/schl">scholorship</a></h3>
+                            </div>
+                     </div>
+
+                             <div class="campus-col">
+                            <img src="/media/plcm1.png">
+                            <div class="layer">
+                                   <h3><a href="/category/plcmnt">placments</a></h3>
+                                   
+                            </div>
+                     </div>
+                     <div class="campus-col">
+                            <img src="/media/frml12.jpg">
+                            <div class="layer">
+                                   <h3><a href="/category/frml">Formals</a></h3>
+                            
+                            </div>
+                            
+                     </div>
+                       
+                </div>
+                
+        </section>    
+<!-----facilities---->
+        <section class="facilities">
+              <h1>OUR FACILITIES</h1>
+              <p>we are known for..</p>
+              
+              <div class="row">
+                    <div class="facilities-col">
+                     <img src="/media/filter1.jpg">
+                     <h3>Get the filters..</h3>
+                     <p><b>Tired of scrolling a lot and missing the import feeds..</b><br> don;t woory we are here to help you out<br> Just go through filters and get all spesific notices..</p>
+                     </div> 
+                     <div class="facilities-col">
+                     <img src="/media/event.jpg">
+                     <h3>WELCOMING SUGGESTIONS...</h3>
+                     <p><b>Want to give any suggestions aur have any quries??</b><br>Just have a look at contact us page.. and send us your valuable quries.. we will get back to you soon..</p>
+                     </div> 
+                     <div class="facilities-col">
+                     <img src="/media/fl.jpg">
+                     <h3>LOST OR FOUND SOMETHING ???</h3>
+                     <p><b>Incase you had lost  any of your belongings in college campus</b><br> form a notices and send that to us through "send notice facility". We will post that notice with your contact informations and if anyone from campus find your belongings then he/she will contact you acccordingly.</p>
+                     </div> 
+                     
+              </div>
+               
+        </section>
+<!-----Call to action---->
+       <section class="cta">
+              <h1>your notices to send for <br> lost and found</h1>
+              <a href="contact" class="hero-btn">CONTACT US</a>              
+       </section>
+<!-----footer---->
+       <section class="footer">
+              <h4>Get in touch</h4>
+              <p>Scheme No.71, Gumasta Nagar,
+                     Indore- 452009 Madhya Pradesh, India
+                     <br>
+                     phone
+                     Toll Free:18002332601
+                     Phone: +91-731-2780011,2382962
+                     <br>
+                     Admission Enquiry: 9329912587, 9424881103, 9329912583
+                     send
+                     <br>
+                     email id:
+                     svimi@svimi.org
+                     admission@svimi.org
+                     <br>
+                     
+              </div>
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-whatsapp"></i>
+              <i class="fa fa-instagram"></i>
+              <i class="fa fa-twitter"></i>
+       </section>
+</body>
+</html>
+
+
