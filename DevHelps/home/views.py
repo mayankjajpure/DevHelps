@@ -20,4 +20,7 @@ def viewblog(request,slug):
     context = {'post':blogs}
     return render(request, 'view.html',context)
 
-
+from .forms import AddBLog
+def AddBlog(request):
+    form = AddBLog()
+    return render(request, 'addblog.html',{'form':form})

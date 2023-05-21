@@ -11,8 +11,7 @@ urlpatterns = [
     path('contact/',contact),
     path('feeds/',feeds),
     path('blog/<slug:slug>/',viewblog, name="viewblog"),
-    
-
+    path('add_blog/',AddBlog, name="viewblog"),
 
 
 
