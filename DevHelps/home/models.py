@@ -8,6 +8,7 @@ from .utils import genrateslug
 class BlogModel(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
+    subtitle = models.CharField(max_length=100)
     content =  FroalaField()
     slug = models.SlugField(max_length=100, null=True, blank=True)
     image = models.ImageField(upload_to="blog", blank=True, null=True)
