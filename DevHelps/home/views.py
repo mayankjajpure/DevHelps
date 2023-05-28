@@ -11,7 +11,7 @@ def contact(request):
     return render(request, 'contact.html')
 
 def feeds(request):
-    blogs = BlogModel.objects.all().order_by('id')
+    blogs = BlogModel.objects.all().order_by('-id')
     context = {'post':blogs}
     return render(request, 'feeds.html',context)
 
@@ -23,4 +23,12 @@ def viewblog(request,slug):
 from .forms import AddBLog
 def AddBlog(request):
     form = AddBLog()
-    return render(request, 'addblog.html',{'form':form})
+    if request.method == "GET":
+        return render(request, 'addblog.html',{'form':form})
+    
+    elif request.method == "POST":
+        blogobj = BlogModel()
+        title = request.POST["title"]
+        subtitle = request.POST["subtitle"]
+        return feeds(request)
+        
