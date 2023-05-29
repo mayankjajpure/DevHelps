@@ -189,15 +189,16 @@ input:focus, textarea:focus {
 				<input name="subtitle" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Blog SubTitle" id="name" />
 			</p>			
             
+			
+			<p class="image">
+				<input type="file" name="image" class="form-control" >
+			</p>
 
-            <p class="image">
-              <input name="IMAGE" type="img">
-            </p>
-            
-            <p class="text">
+            <p class="textarea">
                 {{form.media}}
                 {{form.as_p}}
             </p>
+			
             
             <div class="submit">
               <input type="submit" value="Submit" id="button-blue"/>
