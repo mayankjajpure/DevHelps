@@ -28,7 +28,13 @@ def AddBlog(request):
     
     elif request.method == "POST":
         blogobj = BlogModel()
-        title = request.POST["title"]
-        subtitle = request.POST["subtitle"]
+        blogobj.user = request.user
+        blogobj.title = request.POST["title"]
+        blogobj.image = request.POST["image"]
+        blogobj.subtitle = request.POST["subtitle"]
+        blogobj.content = request.POST["content"]
+        
+        print("\n \n \n\n\n  GOT",blogobj)
+        blogobj.save()
         return feeds(request)
         
