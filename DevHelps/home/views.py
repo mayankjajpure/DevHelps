@@ -33,8 +33,7 @@ def AddBlog(request):
         blogobj.image = request.POST["image"]
         blogobj.subtitle = request.POST["subtitle"]
         blogobj.content = request.POST["content"]
-        
-        print("\n \n \n\n\n  GOT",blogobj)
         blogobj.save()
+    
         return feeds(request)
         
