@@ -27,6 +27,7 @@ def AddBlog(request):
         return render(request, 'addblog.html',{'form':form})
     
     elif request.method == "POST":
+
         blogobj = BlogModel()
         blogobj.user = request.user
         blogobj.title = request.POST["title"]
@@ -35,5 +36,6 @@ def AddBlog(request):
         blogobj.content = request.POST["content"]
         blogobj.save()
     
+
+        print("IMAGEEE  ,",blogobj.image)
         return feeds(request)
-        
