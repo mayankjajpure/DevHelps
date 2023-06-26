@@ -5,7 +5,9 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path("",home, name="landing_page"),
+    path("",auth, name="auth"),
+    path("login",auth, name="auth"),
+    path("langing",home, name="landing_page"),
     path("home/",home, name="landing_page"),
     path("about/",about, name="about"),
     path('contact/',contact),

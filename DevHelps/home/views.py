@@ -1,7 +1,23 @@
 from django.shortcuts import render
 from .models import BlogModel
+from django.contrib.auth import authenticate, login
+
 
 # Create your views here.
+def auth(request):
+    if request.method=="POST":
+        name=request.POST.get('name')
+        passw=request.POST.get('password')
+        user = authenticate(request, username=name, password=passw)
+        if user is not None:
+            login(request, user)
+            return render(request,'home.html')
+        else:
+            print(name,passw)
+            return render(request,'login.html')
+    else:
+        return render(request,'login.html')
+
 def home(request):
     return render(request, 'home.html')
 def about(request):
