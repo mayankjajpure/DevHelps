@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import BlogModel
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login,logout
 
 
 # Create your views here.
@@ -17,6 +17,9 @@ def auth(request):
             return render(request,'login.html')
     else:
         return render(request,'login.html')
+def logoutuser(request):
+    logout(request)
+    return render(request,'login.html')
 
 def home(request):
     return render(request, 'home.html')
